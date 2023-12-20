@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Counter2 from './components/counter/counter2';
+import './index.css';
+import Counter from './component/counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let element = <Counter2 heading="Kmin Counter" startC='10'></Counter2>
+const element = new Counter()
 root.render(element)
-
-
-
-  

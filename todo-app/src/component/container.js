@@ -6,8 +6,8 @@ import './todoapp.scss'
 
 export default function Container(){
     return(
-        <div class="todo-container-wrapper">
-            <div class="todo-container">
+        <div className="todo-container-wrapper">
+            <div className="todo-container">
                 <Form></Form>
                 <Filter></Filter>
                 <List></List>

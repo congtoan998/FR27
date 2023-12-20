@@ -3,10 +3,10 @@ import '../todoapp.scss'
 
 export default function Filter(){
     return(
-        <div class="todo-filter-container">
-        <div class="todo-filter-count">3 items left</div>
-        <div class="todo-filter-status">
-            <span class="active">
+        <div className="todo-filter-container">
+        <div className="todo-filter-count">3 items left</div>
+        <div className="todo-filter-status">
+            <span className="active">
                 All
             </span>
             <span>
