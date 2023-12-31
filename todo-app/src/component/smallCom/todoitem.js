@@ -4,21 +4,27 @@ import { getValue } from "@testing-library/user-event/dist/utils";
 
 export default function Item(props) {
   const handleEdit = () => {
-    console.log('Edit clicked');
+    props.handleEdit(props.todo?.id) 
+    // console.log(props.todo?.content);
   };
 
+
   const handleDelete = () => {
-    console.log('Delete clicked');
+    props.handleDeleteItem(props.todo?.id);
+    console.log("hello")
   };
 
   console.log(props.todo?.isCompleted);
 
   return (
     <div className="todo-item-container">
-      <span className="todo-item-toggle">
+      <span className="todo-item-toggle" >
         <img
           src={props.todo?.isCompleted ? '/assets/complete-tick.svg' : '/assets/active-tick.svg'}
-          alt="tick"
+          alt="tick" onClick={(event) => {
+            event.preventDefault();
+            props.handleToggleComplete(props.todo?.id);
+            console.log("hello")}}
         />
       </span>
       <div className={`todo-item-content ${props.todo?.isCompleted ? 'completed' : ''}`}>{props.todo?.content}</div>
@@ -34,3 +40,4 @@ export default function Item(props) {
   );
 };
 
+//</div>onSubmit={props.handleToggleComplete(props.todo?.id)}//
