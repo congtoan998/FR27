@@ -163,7 +163,7 @@ body {
     cursor: pointer;
 }
 
-.todo-filter-status .active {
+.todo-filter-status span:active {
     border: 1px solid var(--kmin-color-1);
 }
 
